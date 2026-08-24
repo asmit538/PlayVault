@@ -1,11 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import RulebookPage from './pages/RulebookPage'
 import HomePage from './pages/HomePage'
-// import TeamsPage from './pages/TeamsPage'
-// import RulebookPage from './pages/RulebookPage'
-// import SportDetailPage from './pages/SportDetailPage'
-// import EquipmentPage from './pages/EquipmentPage'
-
 function App() {
   return (
     <div>
@@ -13,6 +9,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/rulebook" element={<RulebookPage />} />
+        <Route path="/rulebook/:sportId" element={<SportDetailPage />} />
       </Routes>
     </div>
   )

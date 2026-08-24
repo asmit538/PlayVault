@@ -1,0 +1,111 @@
+.rulebook-page {
+  padding: 24px 20px 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.rulebook-header-banner {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.rulebook-header-banner h1 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.rulebook-header-banner p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin: 0;
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+.rulebook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.rulebook-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 18px;
+  background-color: var(--card-bg);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.rulebook-card:hover {
+  border-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.rulebook-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.rulebook-sport-tag {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.rule-count-pill {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--blue-color);
+  background-color: #0f172a;
+  border: 1px solid var(--border-color);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.rulebook-card-body {
+  margin-bottom: 14px;
+}
+
+.rulebook-card-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.rulebook-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.rulebook-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}
+
+.rulebook-card-hint {
+  font-size: 13px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.rulebook-arrow {
+  font-size: 15px;
+  color: var(--primary-color);
+}
