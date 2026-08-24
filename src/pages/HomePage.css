@@ -1,0 +1,28 @@
+.home-page {
+  padding: 24px 20px 50px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home-hero {
+  margin-bottom: 24px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+
+.home-hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.home-hero p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin: 0;
+  max-width: 650px;
+  line-height: 1.5;
+}
