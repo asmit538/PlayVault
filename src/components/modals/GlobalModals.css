@@ -1,0 +1,153 @@
+.pv-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pv-form-alert {
+  padding: 10px 14px;
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.pv-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 580px) {
+  .pv-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pv-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pv-form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pv-form-group input,
+.pv-form-group select,
+.pv-form-group textarea {
+  width: 100%;
+}
+
+.input-error {
+  border-color: var(--color-danger) !important;
+  background: rgba(192, 57, 43, 0.04) !important;
+}
+
+.pv-form-error {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+  font-weight: 500;
+}
+
+.pv-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.pv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pv-btn-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.pv-btn-primary:hover {
+  background: var(--color-primary-light);
+}
+
+.pv-btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.pv-btn-ghost:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.pv-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Result Recording Box */
+.pv-result-teams-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 10px;
+  background: var(--bg-main);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
+  margin-bottom: 8px;
+}
+
+.pv-result-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 180px;
+}
+
+.pv-result-team-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.pv-result-team-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.pv-result-score-input {
+  width: 100px !important;
+  font-size: 1.8rem !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  padding: 8px !important;
+}
+
+.pv-result-vs {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-tertiary);
+}
