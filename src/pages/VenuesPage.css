@@ -1,0 +1,450 @@
+.vn-page {
+  background: var(--bg-main);
+  min-height: 100vh;
+  padding: 32px 28px 60px;
+}
+
+.vn-inner {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.vn-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.vn-header-left {
+  flex: 1;
+}
+
+.vn-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-info-bg);
+  color: var(--color-info);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.vn-breadcrumb-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-info);
+}
+
+.vn-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.vn-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin-top: 6px;
+}
+
+.vn-header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.vn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.vn-btn-gold {
+  background: var(--color-gold);
+  color: #142e21;
+}
+
+.vn-btn-gold:hover {
+  background: var(--color-gold-light);
+  transform: translateY(-1px);
+}
+
+.vn-btn-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.vn-btn-primary:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+/* Tabs */
+.vn-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.vn-tab {
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vn-tab:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.vn-tab.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(26, 60, 42, 0.2);
+}
+
+/* Filter Bar */
+.vn-filter-bar {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.vn-search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 480px;
+}
+
+.vn-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+.vn-search-wrap input {
+  width: 100%;
+  padding-left: 36px;
+}
+
+.vn-sport-filter select {
+  font-size: 0.85rem;
+}
+
+/* Grid */
+.vn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.vn-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition-base);
+}
+
+.vn-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.vn-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vn-card-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.vn-card-loc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.vn-card-icon {
+  font-size: 1.8rem;
+}
+
+.vn-card-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: var(--bg-main);
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.vn-spec-lbl {
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  display: block;
+}
+
+.vn-spec-val {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.vn-card-sports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vn-sports-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.vn-sports-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vn-sport-pill {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--color-primary);
+  border: 1px solid var(--border-light);
+}
+
+.vn-card-facilities {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vn-facilities-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.vn-facilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.vn-next-booking-bar {
+  background: rgba(200, 151, 46, 0.08);
+  border: 1px solid rgba(200, 151, 46, 0.3);
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vn-next-lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #9c7318;
+  letter-spacing: 0.05em;
+}
+
+.vn-next-booking-bar strong {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+}
+
+.vn-next-title {
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+.vn-card-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+
+.vn-btn-book {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.vn-btn-book:hover {
+  background: var(--color-primary-light);
+}
+
+/* Schedule Tab */
+.vn-schedule-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vn-schedule-toolbar {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.vn-schedule-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vn-schedule-field label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.vn-clear-btn {
+  font-size: 0.75rem;
+  color: var(--color-danger);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.vn-schedule-legend {
+  display: flex;
+  gap: 8px;
+}
+
+.vn-bookings-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.vn-bookings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.vn-bookings-header h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.vn-bookings-table-wrap {
+  overflow-x: auto;
+}
+
+.vn-table {
+  width: 100%;
+}
+
+.vn-match-link {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+.vn-cancel-btn {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.vn-empty-bookings {
+  padding: 48px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .vn-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .vn-grid {
+    grid-template-columns: 1fr;
+  }
+}

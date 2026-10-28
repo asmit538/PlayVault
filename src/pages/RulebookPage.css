@@ -1,0 +1,956 @@
+/* ==========================================================================
+   PlayVault RulebookPage — Modern Collegiate Athletics Specifications
+   Palette: Deep Varsity Green (#1a3c2a), Athletic Gold (#c8972e), & Cream (#f5f1eb)
+   ========================================================================== */
+
+.rb-page {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  padding: 24px 32px 64px;
+  color: var(--text-primary);
+}
+
+.rb-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ─── HEADER CARD ─── */
+.rb-header-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 34px 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.rb-header-left {
+  flex: 1;
+}
+
+.rb-header-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.rb-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(200, 151, 46, 0.12);
+  border: 1px solid var(--color-gold);
+  color: #9c7318;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.badge-dot-gold {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+.rb-badge-compliance {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-success);
+  background: var(--color-success-bg);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.rb-header-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0 0 10px;
+  line-height: 1.1;
+}
+
+.rb-header-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.rb-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.rb-header-doc-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+}
+
+.doc-icon {
+  font-size: 1.4rem;
+}
+
+.doc-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.doc-meta {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+}
+
+.rb-verify-btn {
+  background: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(26, 60, 42, 0.2);
+}
+
+.rb-verify-btn:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.rb-verify-btn.verified {
+  background: var(--color-success);
+}
+
+/* ─── STATS ROW ─── */
+.rb-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.rb-stat-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: transform var(--transition-fast);
+}
+
+.rb-stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.rb-stat-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.rb-stat-icon-wrap.green {
+  background: rgba(26, 60, 42, 0.08);
+}
+
+.rb-stat-icon-wrap.gold {
+  background: rgba(200, 151, 46, 0.12);
+}
+
+.rb-stat-icon-wrap.blue {
+  background: rgba(41, 128, 185, 0.1);
+}
+
+.rb-stat-icon-wrap.purple {
+  background: rgba(142, 68, 173, 0.1);
+}
+
+.rb-stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.rb-stat-val {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.rb-stat-lbl {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ─── TOOLBAR & SEARCH ─── */
+.rb-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rb-search-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.rb-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: var(--text-tertiary);
+}
+
+.rb-search-input {
+  width: 100%;
+  padding: 14px 44px 14px 46px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.rb-search-input:focus {
+  border-color: var(--color-primary);
+}
+
+.rb-clear-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.rb-category-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rb-cat-tab {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.rb-cat-tab:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.rb-cat-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(26, 60, 42, 0.25);
+}
+
+/* ─── DISCIPLINE CARDS GRID ─── */
+.rb-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.rb-empty-state {
+  grid-column: 1 / -1;
+  background: #ffffff;
+  border: 1px dashed var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-icon {
+  font-size: 3rem;
+}
+
+.rb-reset-btn {
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rb-discipline-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all var(--transition-base);
+}
+
+.rb-discipline-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 151, 46, 0.6);
+  box-shadow: 0 12px 28px rgba(26, 60, 42, 0.1);
+}
+
+.rb-card-watermark {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(26, 60, 42, 0.05);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.rb-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.rb-sport-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.rb-card-heading-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rb-card-tier {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #9c7318;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rb-card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* ─── REALISTIC COURT & FIELD VISUALS ─── */
+.rb-diagram-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.rb-court-visual {
+  width: 100%;
+  height: 110px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rb-court-surface {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Basketball Wood */
+.rb-surface-wood {
+  background: linear-gradient(135deg, #dfa265 0%, #c48342 100%);
+  border: 2px solid #ffffff;
+}
+
+.rb-court-center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.rb-court-midline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ffffff;
+}
+
+.rb-court-key {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  width: 38px;
+  background: rgba(192, 57, 43, 0.4);
+  border: 2px solid #ffffff;
+}
+
+.rb-court-key-left { left: 0; border-left: none; }
+.rb-court-key-right { right: 0; border-right: none; }
+
+.rb-free-throw-circle {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+}
+
+.rb-court-key-right .rb-free-throw-circle {
+  right: auto;
+  left: -12px;
+}
+
+/* Soccer Grass */
+.rb-surface-grass {
+  background: repeating-linear-gradient(90deg, #27ae60 0px, #27ae60 20px, #2ecc71 20px, #2ecc71 40px);
+  border: 2px solid #ffffff;
+}
+
+.rb-pitch-center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.rb-pitch-midline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ffffff;
+}
+
+.rb-pitch-box {
+  position: absolute;
+  top: 22%;
+  bottom: 22%;
+  width: 44px;
+  border: 2px solid #ffffff;
+}
+
+.rb-pitch-box-left { left: 0; border-left: none; }
+.rb-pitch-box-right { right: 0; border-right: none; }
+
+.rb-goal-box {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  width: 18px;
+  border: 2px solid #ffffff;
+}
+
+.rb-pitch-box-left .rb-goal-box { left: 0; border-left: none; }
+.rb-pitch-box-right .rb-goal-box { right: 0; border-right: none; }
+
+/* Tennis US Open Blue */
+.rb-surface-tennis {
+  background: #1a5276;
+  border: 6px solid #2e7d32;
+  position: relative;
+}
+
+.rb-tennis-net {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #f1c40f;
+  box-shadow: 0 0 4px #000;
+}
+
+.rb-tennis-service-box-left {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 15%;
+  right: 50%;
+  border: 1.5px solid #ffffff;
+}
+
+.rb-tennis-service-box-right {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 50%;
+  right: 15%;
+  border: 1.5px solid #ffffff;
+}
+
+/* Volleyball Court */
+.rb-surface-volleyball {
+  background: #e59866;
+  border: 2px solid #ffffff;
+}
+
+.rb-vb-net {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2.5px;
+  background: #c8972e;
+}
+
+.rb-vb-attack {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.rb-vb-attack-left { left: 30%; }
+.rb-vb-attack-right { right: 30%; }
+
+/* Cricket Oval */
+.rb-surface-oval {
+  background: #27ae60;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.rb-cricket-pitch-strip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 48px;
+  background: #d4ac0d;
+  border-radius: 2px;
+}
+
+.rb-cricket-crease-left {
+  position: absolute;
+  top: 32%;
+  left: 45%;
+  right: 45%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.rb-cricket-crease-right {
+  position: absolute;
+  bottom: 32%;
+  left: 45%;
+  right: 45%;
+  height: 2px;
+  background: #ffffff;
+}
+
+/* Track Mondo */
+.rb-surface-track {
+  background: #c0392b;
+  position: relative;
+  overflow: hidden;
+}
+
+.rb-track-ring-1 {
+  position: absolute;
+  inset: 6px;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+}
+
+.rb-track-ring-2 {
+  position: absolute;
+  inset: 16px;
+  border: 1.5px dashed #ffffff;
+  border-radius: 24px;
+}
+
+.rb-track-field-infield {
+  position: absolute;
+  inset: 24px;
+  background: #27ae60;
+  border-radius: 18px;
+}
+
+.rb-diagram-caption {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Specs Grid */
+.rb-card-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  background: #faf8f5;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 10px;
+}
+
+.rb-spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.rb-spec-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #9c7318;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rb-spec-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Details Chips */
+.rb-card-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rb-detail-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-input);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.chip-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+/* Rules Check */
+.rb-card-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+}
+
+.rb-rule-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.check-mark {
+  color: var(--color-success);
+  font-weight: 900;
+  font-size: 0.85rem;
+}
+
+/* Tags */
+.rb-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rb-tag {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(26, 60, 42, 0.08);
+  border: 1px solid rgba(26, 60, 42, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+/* Action Link */
+.rb-card-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  margin-top: auto;
+}
+
+.rb-card-link:hover {
+  background: var(--color-primary-light);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.arrow-icon {
+  font-size: 1.1rem;
+}
+
+/* ─── BOTTOM BANNER ─── */
+.rb-bottom-banner {
+  background: linear-gradient(135deg, #1a3c2a 0%, #142e21 100%);
+  border: 1px solid rgba(200, 151, 46, 0.35);
+  border-radius: var(--radius-xl);
+  padding: 34px 44px;
+  box-shadow: 0 10px 30px rgba(26, 60, 42, 0.15);
+  color: #ffffff;
+}
+
+.rb-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.rb-banner-text {
+  flex: 1;
+}
+
+.rb-banner-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+}
+
+.rb-banner-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 4px 0 8px;
+}
+
+.rb-banner-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.rb-banner-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.rb-banner-btn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.rb-banner-btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.rb-banner-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.rb-banner-btn-gold {
+  background: var(--color-gold);
+  border: none;
+  color: #142e21;
+}
+
+.rb-banner-btn-gold:hover {
+  background: var(--color-gold-light);
+}
+
+/* ─── COMPLIANCE FOOTER ─── */
+.rb-compliance-footer {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 18px 26px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.rb-compliance-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rb-compliance-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.badge-shield {
+  font-size: 1.3rem;
+}
+
+.rb-compliance-meta {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.rb-compliance-sep {
+  margin: 0 6px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1200px) {
+  .rb-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rb-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rb-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .rb-page {
+    padding: 16px 16px 48px;
+  }
+
+  .rb-header-card {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .rb-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rb-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .rb-compliance-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
