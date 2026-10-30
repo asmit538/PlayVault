@@ -95,3 +95,8 @@ playvault/
 - The Equipment count on the Dashboard only refreshes when the Dashboard
   page (re)mounts (e.g. navigating there from another page) — it does not
   live-update while you're sitting on the Equipment page in another tab.
+---
+
+## Contributors
+
+- **Karan Garg** – Contributed to project documentation and setup.
